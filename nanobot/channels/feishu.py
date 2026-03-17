@@ -238,6 +238,7 @@ class FeishuConfig(Base):
     enabled: bool = False
     app_id: str = ""
     app_secret: str = ""
+    domain: str = ""
     encrypt_key: str = ""
     verification_token: str = ""
     allow_from: list[str] = Field(default_factory=list)
