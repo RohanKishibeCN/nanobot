@@ -300,6 +300,7 @@ class FeishuChannel(BaseChannel):
         self._client = lark.Client.builder() \
             .app_id(self.config.app_id) \
             .app_secret(self.config.app_secret) \
+            .domain(self.config.domain) \  # 确保这行存在，适用于 Lark
             .log_level(lark.LogLevel.INFO) \
             .build()
         builder = lark.EventDispatcherHandler.builder(
