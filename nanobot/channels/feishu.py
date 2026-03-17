@@ -327,8 +327,8 @@ class FeishuChannel(BaseChannel):
         self._ws_client = lark.ws.Client(
             self.config.app_id,
             self.config.app_secret,
-            self.config.domain,
             event_handler=event_handler,
+            domain=self.config.domain, 
             log_level=lark.LogLevel.INFO
         )
 
